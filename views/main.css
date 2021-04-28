@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: black;
+}
+
+:root {
+    --mdc-theme-primary: #009393;
+    --mdc-theme-secondary: #feeae6;
+  }
+
+#videoBtn, #audioBtn, #screenShareBtn {
+    background-color: #9D9D9D;
+}
+
+#hangUpBtn, #cancelBtn, #rejectBtn {
+    background-color: #CE0000;
+}
+
+#joinBtn {
+    background-color: #00A600;
+}
+
+#videoBtn.active, #audioBtn.active, #screenShareBtn.active {
+    background-color: #009393;
+}
+
+#targetDiv {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+#targetMsg {
+    font-size: medium;
+    margin: 2% 30%;
+    padding: 8px;
+    background-color: #ffffff85;
+    text-align: center;
+    border-radius: 16px;
+}
+
+div#endScreen {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+
+div#videos {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+}
+
+.largeVideo {
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+#localVideo {
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+#videoContainer {
+    display: grid;
+    grid-auto-rows: 17%;
+    grid-row-gap: 2%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1%;
+    width: 17%;
+    height: 95%;
+    z-index: 2;
+    transform: translateZ(100px);
+    -webkit-transform: translateZ(100px);
+    -moz-transform: translateZ(100px);
+}
+
+#videoContainer>video {
+    border: 1px solid gray;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#videoContainer>video.local {
+    border: 1px solid red;
+}
+
+.mirror {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+#callingBtns, #dialingBtns, #incomingBtns {
+    z-index: 3;
+    transform: translateZ(120px);
+    -webkit-transform: translateZ(120px);
+    -moz-transform: translateZ(120px);
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#callingBtns>button, #incomingBtns>button {
+    margin: 1em;
+}
+
+.mdc-dialog, .mdc-snackbar {
+    z-index: 3;
+    transform: translateZ(120px);
+    -webkit-transform: translateZ(120px);
+    -moz-transform: translateZ(120px);
+}
