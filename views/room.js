@@ -6,7 +6,7 @@ const identity = document.querySelector("#identity").textContent;
 const startedIdSet = new Set();
 const CallStatusEnum = Object.freeze({ "Calling": 1, "Incoming": 2, "Dialing": 3, "NoReply": 4 });
 const socket = io(
-    "http://localhost:3001", 
+    "http://18.177.137.173/:3001", 
     { 'reconnection': false, 'autoConnect': false }
 );
 
